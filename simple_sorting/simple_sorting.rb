@@ -25,5 +25,6 @@ def proper_format(num)
 end
 
 file.each_line do |line|
-    puts line.split(" ").map {|x| proper_format(x) }.sort.join(" ")
+    arr = line.split(" ").map {|x| x.to_f}.sort 
+    puts arr.map {|x| proper_format(x) }.join(" ")
 end

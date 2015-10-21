@@ -32,7 +32,7 @@ file = File.open("clean_up_words.txt")
 
 def clean_up_words(str)
     words = []
-    str.scan(/[a-zA-Z]+/).each {|word| words << word }
+    str.downcase.scan(/[a-z]+/).each {|word| words << word }
     words.join(" ")
 end
 
